@@ -1,0 +1,20 @@
+{
+    "name": "wopice/gmaps",
+    "type": "library",
+    "description": "Nette Framework component for working with Google Maps",
+    "homepage": "http://github.com/wopice/gmaps",
+    "license": ["BSD-3-Clause", "GPL-2.0", "GPL-3.0"],
+    "authors": [
+        {
+            "name": "Václav Boháč",
+            "homepage": "http://wop.vlcovice.net"
+        }
+    ],
+    "require": {
+        "php": ">=5.3.0"
+    },
+    "require-dev": {
+        "nette/tester": "*",
+        "nette/nette": "2.0.*"
+    }
+}

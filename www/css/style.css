@@ -1,0 +1,105 @@
+body {
+  font-family: Arial;
+  text-align: center;
+}
+
+html, body {
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background-color: #333;
+    margin: 0;
+}
+
+nav {
+    list-style-type: none;
+    margin: 0;
+    padding: 5px 0;
+    overflow: hidden;
+}
+
+nav ul li {
+    color: #fff;
+    display: inline;
+    font-family: 'Raleway', sans-serif;
+    font-weight: 600;
+    font-size: 12px;
+    margin-right: 25px;
+    text-transform: uppercase;
+    float: right;
+    padding-bottom: 15px;
+}
+
+.container {
+    width: 100%;
+    margin: 0 auto;
+    padding: 0;
+}
+
+nav li a {
+  text-decoration: none;
+  color: #fff;    
+}
+
+nav li a:hover {
+    background-color: #2e2e2e;
+}
+      
+.jumbotron {
+  width: 100%;
+  background: url('../images/cover.jpg') no-repeat center center;
+  background-size: cover;
+  height: 700px;
+}
+
+.main {
+  position: relative;
+  margin: 0;
+  text-align: center;        
+}
+
+.main h1 {
+  color: #fff;
+  font-family: 'Raleway', sans-serif;
+  font-weight: 600;  
+  margin-top: 0;
+  margin-bottom: 80px;
+  text-transform: uppercase;
+  background-color: rgba(64, 36, 38, 0.5);
+  padding: 1em;
+  font-size: 100px; 
+}
+
+.add-button {
+  background-color: lightblue;
+  padding: 1em 4em;
+  text-decoration: none;
+  color: #333;
+  position: relative;
+  top: -9em;
+  text-transform: uppercase;  
+}
+
+@media (max-width: 500px) {
+  .main h1 {
+      font-size: 50px;
+      padding: 0 40px;
+  } 
+}
+
+img {
+  size: 1em 1em;
+}
+
+#search input[type="search"] {
+  background: url(search.png) no-repeat 10px 6px #fcfcfc;
+  border: 1px solid #d1d1d1;
+  font: bold 12px Arial,Helvetica,Sans-serif;
+  color: #bebebe;
+  width: 150px;
+  padding: 6px 15px 6px 35px;
+  margin: -7px 0 0 1em;
+  float: left;
+}

@@ -1,0 +1,27 @@
+{**
+ * Gmaps template
+ *
+ * @copyright  Copyright (c) 2010 Vaclav Bohac
+ * @package    Gmaps
+ *
+ * @param string   $basePath web base path
+ * @param array    $options list of options
+ * @param InstanceFilterIterator $markers set of markers
+ * @param InstanceFilterIterator $directions set of directions
+ * @param InstanceFilterIterator $polygons set of polygons
+ *}
+
+<div id="gmaps"
+    class="google-maps"
+    style="width: {$width}px; height: {$height}px"
+    data-options="{$options|json}"
+    data-markers="{$markers|toArray|json}"></div>
+
+<script src="https://maps.googleapis.com/maps/api/js?sensor=false"></script>
+<script src="{$basePath}js/gmaps.js"></script>
+
+<script type="text/javascript">
+    google.maps.event.addDomListener(window, 'load', function () {
+        GMAPS.init();
+    });
+</script>
