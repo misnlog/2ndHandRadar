@@ -1,6 +1,30 @@
 {block content}
-<h1 n:block=title>Sign in</h1>
 
-{control signInForm}
 
-{* or use {include '../components/form.latte', form => signInForm} *}
+<form n:name=signInForm class="signin-form">
+	<h2 n:block=title class="title">Prihlásenie</h2>
+	<hr>
+	<br>
+	<table border="0" style="width:100%">
+	
+	<tr>
+    <p><td class="label"><label n:name=username class="signin-form-label">Uživateľské meno:</label></td> <td><input n:name=username class="signin-form-input" size=25></td>
+    </tr>
+    
+    <tr>
+    <p><td class="label"><label n:name=password class="signin-form-label">Heslo:</label></td> <td><input n:name=password class="signin-form-input" size=25></td>
+    </tr>    
+    </table>
+
+    <p><input n:name=send class="signin-form-submit">
+    <p>Ešte u nás nemáš účet? <a n:href="Registration:register">Zaregistruj sa tu.</a></p> 
+
+
+   
+    
+         
+</form>
+
+{* {control signInForm} *}
+
+{* or {include '../components/form.latte', form => signInForm} *}

@@ -1,0 +1,36 @@
+{block content}
+
+
+{* {control registerForm} *}
+
+<form n:name=registerForm class="register-form">
+	<h2 n:block=title class="title">Registrácia</h2>
+	<hr>
+	<br>
+	<table border="0" style="width:100%">
+	
+	<tr>
+    <p><td class="label"><label n:name=username class="register-form-label">Uživateľské meno: <span class="star">*</span></label></td> <td><input n:name=username class="register-form-input" size=40></td>
+    </tr>
+    
+    <tr>
+    <p><td class="label"><label n:name=email class="register-form-label">Email: <span class="star">*</span></label></td> <td><input n:name=email class="register-form-input" size=40></td>
+    </tr>
+
+    <tr>
+    <p><td class="label"><label n:name=password class="register-form-label">Heslo: <span class="star">*</span></label></td> <td><input n:name=password class="register-form-input" size=40></td>
+    </tr>
+
+    <tr>
+    <p><td class="label"><label n:name=password2 class="register-form-label">Potvrdenie hesla: <span class="star">*</span></label></td> <td><input n:name=password2 class="register-form-input" size=40></td>
+    </tr>
+
+    </table>
+
+    <p><input n:name=send class="register-form-submit">
+    <p>Už u nás máš účet? <a n:href="Sign:in">Prihlás sa tu.</a></p> 
+         
+</form>
+
+
+

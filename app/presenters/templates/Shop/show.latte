@@ -1,11 +1,136 @@
 {block content}
+<div class="shop-show">
+<p><a n:href="Homepage:default">← späť na domovskú stránku</a></p>
 
-<p><a n:href="Homepage:default">← zpět na výpis příspěvků</a></p>
-
-<div class="date">{$shop->added_at|date:'F j, Y'}</div>
+<div class="date">Pridaný: {$shop->added_at|date:'F j, Y'}</div>
 
 <h1 n:block="title">{$shop->name}</h1>
 
-<div class="shop">{$shop->about}</div>
+<div class="profile"><img src="{$basePath}/images/thumbs/{$shop->image_path}"></div>
+
+<div class="images">
+    {foreach $gallery as $image}        
+        <img src="{$basePath}/images/thumbs/{$image->image_path}">
+    {/foreach}
+</div>
+
+ <table border="0" style="width:70%">
+
+ <tr>
+    <td>Adresa:</td> 
+
+	<td><div class="street">{$shop->street} <span class="number">{$shop->house_number}</span></div>
+	<div class="city">{$shop->city}, <span class="country">{$shop->country}</span></div>
+	<div ></div></td>
+</tr>
+
+<tr>
+	<td>Popis:</td>
+	<td><div class="about">{$shop->about}</div></td>
+</tr>
+
+<tr>
+	<td>Otváracie hodiny:</td>
+
+	<td>
+	<table style="width:20%">
+	<tr>
+	{if $shop->monday}
+	<div class="monday_open"><td>Pondelok:</td> <td>{$shop->monday_open} - {$shop->monday_closed}</td></div>
+	{else}
+	<div><td>Pondelok:</td> <td>zatvorené</td></div>
+	{/if}
+
+	<tr>	
+	{if $shop->tuesday}
+	<div class="tuesday_open"><td>Utorok:</td> <td>{$shop->tuesday_open} - {$shop->tuesday_closed}</td></div>
+	{else}
+	<div><td>Utorok:</td> <td>zatvorené</td></div>
+	{/if}
+	</tr>
+
+	<tr>	
+	{if $shop->wednesday}
+	<div class="wednesday_open"><td>Streda:</td> <td>{$shop->wednesday_open} - {$shop->wednesday_closed}</td></div>
+	{else}
+	<div><td>Streda:</td> <td>zatvorené</td></div>
+	{/if}
+	</tr>
+
+	<tr>
+	{if $shop->thursday}
+	<div class="thursday_open"><td>Štvrtok:</td> <td>{$shop->thursday_open} - {$shop->thursday_closed}</td></div>
+	{else}
+	<div><td>Štvrtok:</td> <td>zatvorené</td></div>
+	{/if}
+	</tr>
+
+	<tr>
+	{if $shop->friday}
+	<div class="friday_open"><td>Piatok:</td> <td>{$shop->friday_open} - {$shop->friday_closed}</td></div>
+	{else}
+	<div><td>Piatok:</td> <td>zatvorené</td></div>
+	{/if}
+	</tr>
+
+	<tr>
+	{if $shop->saturday}
+	<div class="saturday_open"><td>Sobota:</td> <td>{$shop->saturday_open} - {$shop->saturday_closed}</td></div>
+	{else}
+	<div><td>Sobota:</td> <td>zatvorené</td></div>
+	{/if}
+	</tr>
+	
+	<tr>
+	{if $shop->sunday}
+	<div class="sunday_open"><td>Nedeľa:</td> <td>{$shop->sunday_open} - {$shop->sunday_closed}</td></div>
+	{else}
+	<div><td>Nedeľa:</td> <td>zatvorené</td></div>
+	{/if}
+	</tr>
+
+	</table>
+	</td>
+
+</tr>
+
+<tr>
+
+	{if $shop->url}
+	<div class="url"><td>Web:</td>
+	<td>{$shop->url}</td></div>
+	{/if}
+</tr>
+
+<tr>
+{if $shop->phone}
+<div class="phone"><td>Tel. kontakt:</td>
+<td>{$shop->phone}</td></div>
+{/if}
+</tr>
+
+<tr>
+{if $shop->email}
+<div class="email"><td>Kontaktný email:</td>
+<td>{$shop->email}</td></div>
+{/if}
+</tr>
+</table>
+
+<a class="edit" n:href="edit $shop->id" n:if="$user->loggedIn">Upraviť</a>
+
+<h2>Komentáre</h2>
+
+<div class="comments">
+    {foreach $comments as $comment}        
+        <div>{$comment->content}</div>
+    {/foreach}
+</div>
+
+
+
+{control commentForm}
+
+</div>
 
 {/block}

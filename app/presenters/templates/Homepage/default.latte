@@ -1,40 +1,29 @@
 
-{block content}
-  <header>
-  <div class="container">
-    <nav>
-      <ul>        
-        <li><a href="registration.html">Registrácia</a></li>    
-        <li><a href="login.html">Prihlásenie</a></li>
-        <li><a href="">O aplikácii</a></li>        
-      </ul>
-      <li>
-        <form method="get" action="/search" id="search">
-  <input name="q" type="search" size="40" placeholder="Search..." />
-</form>
-</li>
-
-    </nav>      
-  </div>
-</header>
+{block content}  
 
     <div class="jumbotron">
       <div class="container">  
         <div class="main">          
           <h1>2nd hand radar</h1>          
-          <a class="add-button" href="#">pridaj sekáč</a>
+          <a class="add-button" n:href="Shop:create">Pridaj sekáč</a>
         </div>
       </div>
     </div>
 
-<div n:foreach="$shops as $shop" class="shop">
-   <div class="date">{$shop->added_at|date:'F j, Y'}</div>
-   <h2><a n:href="Shop:show $shop->id">{$shop->name}</a></h2>
-   <img src="{$basePath}/images/{$shop->image_path}">
-   <div>{$shop->about}</div>
+<div class="shop_gallery">
+  <div n:foreach="$shops as $shop" class="shops">
+    <div class="date">{$shop->added_at|date:'F j, Y'}</div>
+    <h2><a n:href="Shop:show $shop->id">{$shop->name}</a></h2>
+    <div><img src="{$basePath}/images/thumbs/{$shop->image_path}"></div>
+     <div>{$shop->about}</div>
    <br>
+  </div>
 </div>
 
 
-  
+{* <div n:foreach="$gallery as $id => $image" class="gallery">
+  <img src="{$basePath}/images/thumbs/{$image->image_path}">
+</div> *}
+
+
 {/block}

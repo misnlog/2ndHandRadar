@@ -17,6 +17,30 @@
 </head>
 
 <body>
+	<header>
+	  <div class="container">
+	    <nav>
+	      <ul class='navig'>        
+	       {* <li><a n:href="Registration:register">Registrácia</a></li> *}
+	        {if $user->loggedIn}
+	          <li><a n:href="Sign:out">Odhlásiť</a></li>
+	        {else}
+	          <li><a n:href="Sign:in">Prihlásenie / Registrácia</a></li>
+	        {/if}
+	        <li><a href="">O aplikácii</a></li>        
+	      </ul>
+	     	<li><a n:href="Homepage:default"><img src="{$basePath}/images/home.png" class="home"></a></li>
+	      	<li>
+	        <form method="get" action="/search" id="search">
+	  			<input name="q" type="search" size="40" placeholder="Search..." />
+			</form>
+			</li>
+		
+
+    </nav>      
+  </div>
+</header>
+
 	<div n:foreach="$flashes as $flash" n:class="flash, $flash->type">{$flash->message}</div>
 
 	{include content}
@@ -26,5 +50,8 @@
 	<script src="//nette.github.io/resources/js/netteForms.min.js"></script>
 	<script src="{$basePath}/js/main.js"></script>
 	{/block}
+
+
+</ul>
 </body>
 </html>

@@ -26,5 +26,14 @@ class HomepagePresenter extends BasePresenter
     $this->template->shops = $this->database->table('shops')
         ->order('added_at DESC')
         ->limit(20);
+
+   // $this->template->gallery = $this->database->table('gallery');
+
+    //$this->$database->query('SELECT image_path FROM gallery WHERE id=?', $shop->id)->dump();
+
+    
   }
+
+
+
 }

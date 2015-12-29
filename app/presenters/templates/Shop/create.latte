@@ -1,0 +1,103 @@
+{block content}
+<div class="shop-create">
+<h1>Nový sekáč</h1>
+
+{* {control shopForm} *}
+
+<table border="0" style="width:70%">
+<form n:name=shopForm class="shop-form">
+    <tr>
+    <p><td class="label"><label n:name=name class="shop-form-label">Názov: <span class="star">*</span></label></td> <td><input n:name=name class="shop-form-name" size=20></td>
+    </tr>
+        
+    <tr>
+    <p><td class="label"><label n:name=street class="shop-form-label">Ulica: <span class="star">*</span></label></td> <td><input n:name=street class="rshop-form-street"></td>    
+    
+    <td><label n:name=house_number class="shop-form-label">Číslo: <span class="star">*</span></label></td> <td><input n:name=house_number class="shop-form-house"></td>   
+    
+    <td><label n:name=city class="shop-form-label">Mesto: <span class="star">*</span></label> </td> <td><input n:name=city class="shop-form-city"></td>
+    
+    <td><label n:name=country class="shop-form-label">Krajina: <span class="star">*</span></label></td> <td><select n:name=country class="shop-form-country"></select></td>
+    </tr>
+
+    <tr>
+    <p><td class="label"><label n:name=about class="shop-form-label">Popis: <span class="star">*</span></label></td> <td><textarea n:name=about class="shop-form-about"></textarea></td>
+    </tr>
+
+    <tr>    
+    <p><td class="label">Pondelok:</td>
+    <td class="label"><label n:name=monday class="shop-form-label"><checkbox n:name=monday class="shop-form-monday"></checkbox></label></td>
+    <td class="label"><label n:name=monday_open class="shop-form-label">od:</label></td> <td><input n:name=monday_open class="shop-form-monday_open" size=20></td>
+    <td class="label"><label n:name=monday_closed class="shop-form-label">do:</label></td> <td><input n:name=monday_closed class="shop-form-monday_closed" size=20></td>
+    </tr>
+    
+    <tr>
+    <p><td class="label">Utorok:</td>
+    <td class="label"><label n:name=tuesday class="shop-form-label"><checkbox n:name=tuesday class="shop-form-tuesday"></checkbox></label></td>
+    <td class="label"><label n:name=tuesday_open class="shop-form-label">od:</label></td> <td><input n:name=tuesday_open class="shop-form-tuesday_open" size=20></td>
+    <td class="label"><label n:name=tuesday_closed class="shop-form-label">do:</label></td> <td><input n:name=tuesday_closed class="shop-form-tuesday_closed" size=20></td>
+    </tr>
+    
+    <tr>
+    <p><td class="label">Streda:</td>
+    <td class="label"><label n:name=wednesday class="shop-form-label"><checkbox n:name=wednesday class="shop-form-wednesday"></checkbox></label></td>
+    <td class="label"><label n:name=wednesday_open class="shop-form-label">od:</label></td> <td><input n:name=wednesday_open class="shop-form-wednesday_open" size=20></td>
+    <td class="label"><label n:name=wednesday_closed class="shop-form-label">do:</label></td> <td><input n:name=wednesday_closed class="shop-form-wednesday_closed" size=20></td>
+    </tr>
+    
+    <tr>
+    <p><td class="label">Štvrtok:</td>
+    <td class="label"><label n:name=thursday class="shop-form-label"><checkbox n:name=thursday class="shop-form-thursday"></checkbox></label</td>
+    <td class="label"><label n:name=thursday_open class="shop-form-label">od:</label></td> <td><input n:name=thursday_open class="shop-form-thursday_open" size=20></td>
+    <td class="label"><label n:name=thursday_closed class="shop-form-label">do:</label></td> <td><input n:name=thursday_closed class="shop-form-thursday_closed" size=20></td>
+    </tr>
+    
+    <tr>
+    <p><td class="label">Piatok:</td>
+    <td class="label"><label n:name=friday class="shop-form-label"><checkbox n:name=friday class="shop-form-friday"></checkbox></label></td>
+    <td class="label"><label n:name=friday_open class="shop-form-label">od:</label></td> <td><input n:name=friday_open class="shop-form-friday_open" size=20></td>
+    <td class="label"><label n:name=friday_closed class="shop-form-label">do:</label></td> <td><input n:name=friday_closed class="shop-form-friday_closed" size=20></td>
+    </tr>
+    
+    <tr>
+    <p><td class="label">Sobota:</td>
+    <td class="label"><label n:name=saturday class="shop-form-label"><checkbox n:name=saturday class="shop-form-saturday"></checkbox></label></td>
+    <td class="label"><label n:name=saturday_open class="shop-form-label">od:</label></td> <td><input n:name=saturday_open class="shop-form-saturday_open" size=20></td>
+    <td class="label"><label n:name=saturday_closed class="shop-form-label">do:</label></td> <td><input n:name=saturday_closed class="shop-form-saturday_closed" size=20></td>
+    </tr>
+    
+    <tr>
+    <p><td class="label">Nedeľa:</td>
+    <td class="label"><label n:name=sunday class="shop-form-label"><checkbox n:name=sunday class="shop-form-sunday"></checkbox></label></td>
+    <td class="label"><label n:name=sunday_open class="shop-form-label">od:</label></td> <td><input n:name=sunday_open class="shop-form-sunday_open" size=20></td>
+    <td class="label"><label n:name=sunday_closed class="shop-form-label">do:</label></td> <td><input n:name=sunday_closed class="shop-form-sunday_closed" size=20></td>
+    </tr>
+
+
+    <tr>
+    <p><td class="label"><label n:name=url class="shop-form-label">Web:</label></td> <td><input n:name=url class="shop-form-input" size=20></td>
+    </tr>
+
+    <tr>
+    <p><td class="label"><label n:name=phone class="shop-form-label">Tel. kontakt:</label></td> <td><input n:name=phone class="shop-form-input" size=20></td>
+    </tr>
+
+    <tr>
+    <p><td class="label"><label n:name=email class="shop-form-label">Email:</label></td> <td><input n:name=email class="shop-form-input" size=20></td>
+    </tr>
+
+    <tr>
+    <p><td class="label"><label n:name=profile_photo class="shop-form-label">Profilová fotka: <span class="star">*</span></label></td> <td><input n:name=profile_photo class="shop-form-input" size=20></td>
+    </tr>
+
+    <tr>
+    <p><td class="label"><label n:name=images class="shop-form-label">Fotky:</label></td> <td><input n:name=images class="shop-form-input" size=20></td>
+    </tr>
+
+    <tr>
+    <p><td class="label"><input n:name=send class="shop-form-submit"></td>
+    </tr>
+    
+</form>
+</table>
+</div>

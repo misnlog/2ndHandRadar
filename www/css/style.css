@@ -35,7 +35,7 @@ nav ul li {
 .container {
     width: 100%;
     margin: 0 auto;
-    padding: 0;
+    padding: 0;   
 }
 
 nav li a {
@@ -51,7 +51,7 @@ nav li a:hover {
   width: 100%;
   background: url('../images/cover.jpg') no-repeat center center;
   background-size: cover;
-  height: 700px;
+  height: 700px; 
 }
 
 .main {
@@ -102,4 +102,130 @@ img {
   padding: 6px 15px 6px 35px;
   margin: -7px 0 0 1em;
   float: left;
+}
+
+.register-form { 
+  border: 1px solid lightgray;
+  border-radius: 10px;
+  padding-top: 1em;
+  display: inline-block;
+  text-align: center;
+  box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.2);
+  width: 600px;
+  overflow: hidden;
+  margin-top: 4rem;
+}
+
+
+.register-form-submit {
+  background-color: lightblue;
+  margin: 2em;
+  border: 0;
+  width: 35%;
+  padding: 1em 0;
+}
+
+.register-form-submit:hover {
+  cursor: pointer;
+}
+
+.register-form-submit:active {
+  background-color: lightgreen;
+}
+
+
+.register-form-input {  
+  line-height: 1.5; 
+  font-size: 12px;     
+}
+
+.star {
+  color: #f00;
+}
+
+.title {
+  
+}
+
+/*css shop-show*/
+.shop-show{
+  text-align: left;
+  margin-left: 40px;
+}
+
+.address {
+  display: inline-block;
+}
+
+/*css shop-create*/
+.shop-create {
+  text-align: left;
+  margin-left: 40px;
+}
+
+
+.signin-form { 
+  border: 1px solid lightgray;
+  border-radius: 10px;
+  padding-top: 1em;
+  display: inline-block;
+  text-align: center;
+  box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.2);
+  width: 500px;
+  overflow: hidden;
+  margin-top: 4rem; 
+}
+
+
+.signin-form-submit {
+  background-color: lightblue;
+  margin: 2em;
+  border: 0;
+  width: 40%;
+  padding: 1em 0;
+}
+
+.signin-form-submit:hover {
+  cursor: pointer;
+}
+
+.signin-form-submit:active {
+  background-color: lightgreen;
+}
+
+table {
+  padding-left: 20px;
+  padding-right: 40px;
+}
+
+.label {
+  text-align: right;
+}
+
+.signin-form-input {  
+  line-height: 1.5; 
+  font-size: 12px;     
+}
+
+h2 {
+  margin-bottom: 1em;
+}
+
+.home {
+  float: left;
+  padding-right: 5px;  
+  padding-left: 15px;
+  margin: 0px;  
+}
+
+.shops {
+  display: inline-block;
+  margin: 2em;
+}
+
+.shop_gallery {  
+  text-align: left;
+  margin-top: 2em;
+  margin-right: 5em;
+  margin-left: 5em;
 }

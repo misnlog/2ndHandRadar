@@ -14,12 +14,15 @@ application:
 	mapping:
 		*: App\*Module\Presenters\*Presenter
 
-
+    	
 session:
 	expiration: 14 days
 
 
-services:
-	- App\Model\UserManager
+services:	    
 	- App\Forms\SignFormFactory
+	- App\Forms\RegisterFormFactory
 	router: App\RouterFactory::createRouter
+	authenticator: App\Model\MyAuthenticator
+
+
